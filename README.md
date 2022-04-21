@@ -8,7 +8,6 @@ yarn global add nodemon
 yarn add @babel/core --dev
 yarn add @babel/preset-env --dev
 yarn add @babel/node --dev
-echo '{"presets": ["@babel/preset-env"]}' > babel.config.json
 yarn start
 ```
 
@@ -70,7 +69,6 @@ query{
         age: 29
     }
 }
-
 ```
 
 이렇게 요청한 것만 정확하게 보내준다.
