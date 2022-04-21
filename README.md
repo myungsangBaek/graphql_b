@@ -8,7 +8,19 @@ yarn global add nodemon
 yarn add @babel/core --dev
 yarn add @babel/preset-env --dev
 yarn add @babel/node --dev
+```
+
+2. Start
+
+```bash
 yarn start
+```
+
+3. PlayGround
+   Playground는 graphql-yoga에 딸린 기능으로 Database를 테스트하게 해주는 역할을 한다.
+
+```
+http://localhost:4000/graphql
 ```
 
 ## GraphQL
@@ -23,7 +35,7 @@ GraphQL은 오버패칭 없이 DB에 오직 원하는 정보만 요청할 수 �
 
 어떤 하나를 완성하기위해 다른 요청들을 해야할 때 발생한다. 예를들어 페이스북 앱을 실행하면 피드, 알림 등 다양한 정보를 요청하는데 이 요청이 다 오가야만 앱이 시작된다. 이러한 부분을 언더패칭이라고 한다. 즉 REST에서 앱을 실행시키기 위해 많은 소스를 요청해야한다. GraphQL은 한 Query에 정확하게 원하는 정보만 받을 수 있다.
 
-GraphQL에서 URL은 존재하지 않는다.
+GraphQL에서 URL은 존재하지 않는다. Query와 Resolvers만 있다.
 
 ```
 /feed/
@@ -73,6 +85,8 @@ query{
 
 이렇게 요청한 것만 정확하게 보내준다.
 
+Schema는 URL, resolvers는 VIEW의 역할을 한다.
+
 ## graphql-yoga
 
 ```bash
@@ -80,6 +94,10 @@ yarn add graphql-yoga
 ```
 
 GraphQL Server를 쉽게 구축하게 도와준다
+
+## nodemon
+
+nodemon은 JS 저장 시 작동하지만 GraphQL 저장 시 작동하지 않는다.
 
 ## REST API vs GraphQL
 
