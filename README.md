@@ -93,7 +93,7 @@ Schema는 URL, resolvers는 VIEW의 역할을 한다.
 yarn add graphql-yoga
 ```
 
-GraphQL Server를 쉽게 구축하게 도와준다
+GraphQL Server를 쉽게 구축하게 도와준다. mutation은 데이터베이스가 변경될 때 사용한다.
 
 ## nodemon
 

@@ -1,9 +1,10 @@
+type Query {
+  movies: [Moive]
+  movie(id: Int): Moive
+}
+
 type Movie {
   id: Int
   name: String
   score: Int
-}
-type Query {
-  movies: [Moive]
-  movie(id: Int): Moive
 }
