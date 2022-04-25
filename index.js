@@ -8,16 +8,19 @@ const server = createServer({
         id: Int!
         title: String!
         rating : Float!
-        summary : String!
-        language : String!
-        medium_cover_image : String!
+        description_intro: String
+        language: String
+        medium_cover_image: String
+        genres: [String]
       }
     type Query {
         movies(limit: Int, rating: Float): [Movie]!
+        movie(id: Int): Movie
+        suggestions(id: Int!): [Movie]!
       }
     `,
     resolvers,
   },
 });
 
-server.start();
+server.start(() => console.log("Server Running"));

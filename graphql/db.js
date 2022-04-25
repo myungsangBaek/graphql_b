@@ -16,3 +16,28 @@ export const getMovies = async (limit, rating) => {
     console.log(err);
   }
 };
+
+export const getMovie = async () => {
+  try {
+    let REQUEST_URL = API_URL;
+    const getData = await axios.get(REQUEST_URL);
+    console.log(getData);
+    return getData.data.data.movies;
+  } catch (err) {
+    console.log(err);
+  }
+};
+
+export const getSuggestions = async (id) => {
+  let REQUEST_URL = API_URL;
+  const {
+    data: {
+      data: { movies },
+    },
+  } = await axios(REQUEST_URL, {
+    params: {
+      movie_id: id,
+    },
+  });
+  return movies;
+};
